@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Nuro Index: Det danske magnesium-marked 2026"
+message: "Hvis du bruger dette datasaet, saa citer det som nedenfor."
+type: dataset
+authors:
+  - name: "Nuro"
+    website: "https://nuro.nu"
+date-released: "2026-06-07"
+version: "1.0"
+license: CC-BY-4.0
+doi: 10.5281/zenodo.20579199
+url: "https://nuro.nu/pages/nuro-index-dataset"
+repository-code: "https://github.com/NuroBot123/nuro-index-magnesium-dk"
+keywords:
+  - magnesium
+  - kosttilskud
+  - Danmark
+  - markedsdata
