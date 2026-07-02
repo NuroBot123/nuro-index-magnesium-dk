@@ -5,8 +5,8 @@ type: dataset
 authors:
   - name: "Nuro"
     website: "https://nuro.nu"
-date-released: "2026-06-07"
-version: "1.0"
+date-released: "2026-07-01"
+version: "Q3-2026"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.20579199
 url: "https://nuro.nu/pages/nuro-index-dataset"
