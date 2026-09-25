@@ -2,12 +2,38 @@
 
 Et åbent, kildehenvist datasæt over magnesium-kosttilskud på det danske marked: kemisk form, dosis, pris og gennemsigtighed. Indsamlet og vedligeholdt af Nuro, nuro.nu. Formålet er at give forbrugere, journalister og AI-assistenter et gennemsigtigt grundlag for at forstå magnesium-markedet.
 
+## Status 25. september 2026
+
+De aggregerede konklusioner om manglende formangivelse i v1 og Q3 (procenttal under "Nøgletal" nedenfor) er trukket tilbage. Senere kontrol viste fejl i indsamlingen: manglende registreringer blev læst som manglende oplysning hos produktet. Rå-filerne bliver stående som historiske registreringer; procenttallene må ikke bruges som vurdering af produkternes deklaration eller kvalitet. Se https://nuro.nu/pages/nuro-index-dataset.
+
+Ny udgave, september 2026: magnesium-dk-2026-09.csv. 13 produkter, indsamlet 25. september 2026 direkte fra producentens produktside eller en dansk forhandlers næringsdeklaration, med kilde-URL pr. produkt. Ingen aggregerede konklusioner; kun deklarerede data pr. række. Tabel med noter: https://nuro.nu/pages/sammenlign-magnesium.
+
 ## Filer
 
-- magnesium-dk-2026.csv: v1-baseline, juni 2026. Et produkt pr. række.
-- magnesium-dk-2026-q3.csv: Q3-refresh, data hentet 1. juli 2026 (90 listede produkter; strikt sæt n=63). Kombinationsprodukter og øvrige eksklusioner er flagget i notes-kolonnen.
+- magnesium-dk-2026-09.csv: september 2026. 13 produkter, 21 kolonner, kilde-URL pr. række. Ét produkt pr. række.
+- magnesium-dk-2026.csv: v1-baseline, juni 2026. Et produkt pr. række. Historisk; se Status.
+- magnesium-dk-2026-q3.csv: Q3-refresh, data hentet 1. juli 2026 (90 listede produkter; strikt sæt n=63). Kombinationsprodukter og øvrige eksklusioner er flagget i notes-kolonnen. Historisk; se Status.
 
-## Kolonner
+## Kolonner, magnesium-dk-2026-09.csv
+
+- product, brand: produktnavn og producent som angivet på kilden
+- form_declared: magnesiumform(er) ordret fra ingredienslisten
+- other_actives_per_daily_dose: andre deklarerede aktive stoffer pr. dagsdosis
+- elemental_mg_per_daily_dose: elementært magnesium pr. anbefalet dagsdosis, fra næringsdeklarationen
+- daily_dose: anbefalet dagsdosis (antal enheder)
+- elemental_mg_per_unit: elementært magnesium pr. kapsel/tablet
+- ingredients_verbatim: ingrediensliste ordret fra kilden
+- ingredient_count: antal navngivne stoffer (funktionsklasser tælles ikke; stoffer i parentes tælles hver for sig; kapselskal og tilsatte vitaminer tæller med)
+- pack_size, pack_unit: pakkestørrelse
+- price_dkk, price_note: pris i DKK på kilden 25/9 2026; note om tilbud/førpris
+- price_per_100mg_elemental_dkk: price_dkk / (pack_size × elemental_mg_per_unit / 100)
+- public_batch_documentation: om producenten linker til batchdokumentation på produktsiden ("ikke oplyst" = ikke fundet på den citerede side den dag)
+- trademark_raw_material: registreret råvarevaremærke angivet på siden
+- stock_status_2026-09-25: lagerstatus på kilden den dag
+- source_url_primary, source_url_secondary, source_type: kilder og kildetype (producent/forhandler)
+- notes: afvigelser mellem kilder og forbehold
+
+## Kolonner, magnesium-dk-2026.csv og magnesium-dk-2026-q3.csv (historiske)
 
 - retailer: hvor produktet blev observeret. Matas
 - brand: mærke
@@ -26,7 +52,7 @@ Q3-refresh (1. juli 2026): samme metode og samme klassifikator kørt på Matas' 
 
 Fuld metode: https://nuro.nu/pages/nuro-index-methodology
 
-## Nøgletal Q3, strikt sæt, n=63, 1. juli 2026
+## Nøgletal Q3, strikt sæt, n=63, 1. juli 2026 (TRUKKET TILBAGE 25/9 2026, se Status)
 
 - 56% (35 af 63) oplyser ikke den kemiske form i produktnavnet. Juni: 55% (33 af 60).
 - Bisglycinat er navngivet i produktnavnet hos 6% (4 af 63). Juni, metode-konsistent: 7% (4 af 60).
@@ -34,7 +60,7 @@ Fuld metode: https://nuro.nu/pages/nuro-index-methodology
 - Pris: 22,95 til 659,95 kr, median 204,95 kr. Medianen er steget 5 kr siden juni.
 - Blandt produkter der beholdt deres notering fra juni ændrede 15 pris: 11 op, 4 ned.
 
-## Nøgletal v1, strikt sæt, n=60, juni 2026
+## Nøgletal v1, strikt sæt, n=60, juni 2026 (TRUKKET TILBAGE 25/9 2026, se Status)
 
 - 55% (33 af 60) oplyser ikke den kemiske form i produktnavnet.
 - 22% (13 af 60) oplyser den slet ikke, hverken i navn eller på produktsiden.
@@ -61,6 +87,7 @@ Nuro sælger selv magnesium og har dermed en kommerciel interesse i markedet. Da
 
 ## Versioner
 
+- September 2026 (25. september 2026): 13 produkter, deklarerede data med kilde-URL pr. produkt, 21 kolonner. Ingen aggregerede konklusioner. Versions-DOI: følger på Zenodo under 10.5281/zenodo.20579199.
 - v1.0 (juni 2026): Magnesium, Matas-baseret (n=60 strikt / 65 total), stikprøve-verificeret. DOI: 10.5281/zenodo.20579200.
 - Q3-2026 (1. juli 2026): kvartals-refresh, samme metode (n=63 strikt / 90 listet). Transparens-metrikker statistisk uændrede; median-pris +5 kr. DOI: 10.5281/zenodo.21135837.
 - Planlagt v2: flere retailere, flere detail-verifikationer, evt. andre stoffer (D-vitamin, omega-3).
@@ -71,11 +98,14 @@ CC BY 4.0, fri brug med kildeangivelse: Nuro Index, nuro.nu.
 
 ## Citer som
 
-Nuro Index: Dansk magnesium-marked 2026 (Q3-2026). Nuro, nuro.nu. Data pr. 1. juli 2026. DOI: 10.5281/zenodo.20579199.
+Nuro Index (2026). Magnesiumtilskud på det danske marked: deklarerede data, september 2026. Nuro.nu ApS. Data pr. 25. september 2026. DOI: 10.5281/zenodo.20579199 (samlet DOI; udgavens versions-DOI når den foreligger). Licens CC BY 4.0.
+
+Historiske udgaver: Nuro Index: Dansk magnesium-marked 2026 (Q3-2026). Data pr. 1. juli 2026. DOI: 10.5281/zenodo.21135837.
 
 ## Links
 
 - Datasæt-side: https://nuro.nu/pages/nuro-index-dataset
+- Sammenligningstabel (september 2026): https://nuro.nu/pages/sammenlign-magnesium
 - Metode: https://nuro.nu/pages/nuro-index-methodology
 - DOI (Zenodo): https://doi.org/10.5281/zenodo.20579199
 - Wikidata: https://www.wikidata.org/wiki/Q140044999
