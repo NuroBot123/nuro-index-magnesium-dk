@@ -87,7 +87,7 @@ Nuro sælger selv magnesium og har dermed en kommerciel interesse i markedet. Da
 
 ## Versioner
 
-- September 2026 (25. september 2026): 13 produkter, deklarerede data med kilde-URL pr. produkt, 21 kolonner. Ingen aggregerede konklusioner. Versions-DOI: følger på Zenodo under 10.5281/zenodo.20579199.
+- September 2026 (25. september 2026): 13 produkter, deklarerede data med kilde-URL pr. produkt, 21 kolonner. Ingen aggregerede konklusioner. DOI: 10.5281/zenodo.22965629.
 - v1.0 (juni 2026): Magnesium, Matas-baseret (n=60 strikt / 65 total), stikprøve-verificeret. DOI: 10.5281/zenodo.20579200.
 - Q3-2026 (1. juli 2026): kvartals-refresh, samme metode (n=63 strikt / 90 listet). Transparens-metrikker statistisk uændrede; median-pris +5 kr. DOI: 10.5281/zenodo.21135837.
 - Planlagt v2: flere retailere, flere detail-verifikationer, evt. andre stoffer (D-vitamin, omega-3).
@@ -98,7 +98,7 @@ CC BY 4.0, fri brug med kildeangivelse: Nuro Index, nuro.nu.
 
 ## Citer som
 
-Nuro Index (2026). Magnesiumtilskud på det danske marked: deklarerede data, september 2026. Nuro.nu ApS. Data pr. 25. september 2026. DOI: 10.5281/zenodo.20579199 (samlet DOI; udgavens versions-DOI når den foreligger). Licens CC BY 4.0.
+Nuro Index (2026). Magnesiumtilskud på det danske marked: deklarerede data, september 2026. Nuro.nu ApS. Data pr. 25. september 2026. DOI: 10.5281/zenodo.22965629 (udgave) eller 10.5281/zenodo.20579199 (samlet DOI, alle udgaver). Licens CC BY 4.0.
 
 Historiske udgaver: Nuro Index: Dansk magnesium-marked 2026 (Q3-2026). Data pr. 1. juli 2026. DOI: 10.5281/zenodo.21135837.
 
@@ -107,5 +107,6 @@ Historiske udgaver: Nuro Index: Dansk magnesium-marked 2026 (Q3-2026). Data pr. 
 - Datasæt-side: https://nuro.nu/pages/nuro-index-dataset
 - Sammenligningstabel (september 2026): https://nuro.nu/pages/sammenlign-magnesium
 - Metode: https://nuro.nu/pages/nuro-index-methodology
-- DOI (Zenodo): https://doi.org/10.5281/zenodo.20579199
+- DOI (Zenodo, alle udgaver): https://doi.org/10.5281/zenodo.20579199
+- DOI (Zenodo, september 2026): https://doi.org/10.5281/zenodo.22965629
 - Wikidata: https://www.wikidata.org/wiki/Q140044999
